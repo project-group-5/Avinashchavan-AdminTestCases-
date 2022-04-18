@@ -22,36 +22,36 @@ class AdminTest {
 	@Test
 	void testAdd() {
 		Admin admin = new Admin();
-		admin.setUsername("Pavan");
-		admin.setPassword("@123");
+		admin.setUsername("Avinash");
+		admin.setPassword("@231");
 		adminservice.add(admin);
 		
 		Admin admin_to_be_tested = adminservice.find(admin.getId());
-		Assert.assertEquals("Pavan", admin_to_be_tested.getUsername());
-		Assert.assertEquals("@123", admin_to_be_tested.getPassword());
+		Assert.assertEquals("Avinash", admin_to_be_tested.getUsername());
+		Assert.assertEquals("@231", admin_to_be_tested.getPassword());
 	}
 
 	@Test
 	void testFind() {
 		Admin admin = new Admin();
-		admin.setUsername("Pradeep");
+		admin.setUsername("Praveen");
 		admin.setPassword("@1234");
 		adminservice.add(admin);
 		
 		Admin admin_to_be_tested = adminservice.find(admin.getId());
-		Assert.assertEquals("Pradeep", admin_to_be_tested.getUsername());
+		Assert.assertEquals("Praveen", admin_to_be_tested.getUsername());
 		Assert.assertEquals("@1234", admin_to_be_tested.getPassword());
      }
 
 	@Test
 	void testFindAll() {
 		Admin admin = new Admin();
-		admin.setUsername("Ranjan");
+		admin.setUsername("Rahul");
 		admin.setPassword("@12345");
 		adminservice.add(admin);
 		
 		List<Admin> add =  adminservice.findAll();
-		Assert.assertEquals("Ranjan", add.get(1).getUsername());
+		Assert.assertEquals("Rahul", add.get(1).getUsername());
 		
 	}
      		
@@ -60,7 +60,7 @@ class AdminTest {
 	@Test
 	void testUpdate() {
 		Admin admin=new Admin();
-		admin.setUsername("Chitira");
+		admin.setUsername("Chavan");
 		admin .setPassword("#20101");
 		adminservice.add(admin);
 		adminservice.update(admin);
